@@ -22,7 +22,7 @@ const CheckIcon: React.FC<{className?: string}> = ({ className }) => (
 
 const UsernameCard: React.FC<UsernameCardProps> = ({ username, onCopy, isCopied }) => {
   return (
-    <div className="bg-gray-800/70 p-4 rounded-lg flex items-center justify-between gap-4 border border-gray-700 shadow-md hover:bg-gray-700/80 transition-colors duration-300">
+    <div className="bg-gray-800/70 p-4 rounded-lg flex items-center justify-between gap-4 hover:bg-gray-700/80 transition-colors duration-300">
       <p className="font-mono text-lg text-indigo-300 break-all">{username}</p>
       <button
         onClick={onCopy}

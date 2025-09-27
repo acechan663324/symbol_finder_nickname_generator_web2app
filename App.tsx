@@ -45,7 +45,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-indigo-900 text-white font-sans flex flex-col p-4 sm:p-6 lg:p-8">
       <Header />
       <main className="flex-grow flex flex-col items-center justify-center w-full max-w-2xl mx-auto">
-        <div className="w-full bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl shadow-2xl border border-gray-700">
+        <div className="w-full bg-gray-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl">
           <p className="text-center text-indigo-300 mb-4">
             Enter keywords to inspire your new identity.
           </p>
@@ -55,7 +55,7 @@ const App: React.FC = () => {
               value={theme}
               onChange={(e) => setTheme(e.target.value)}
               placeholder="Main theme (e.g., dragon, nebula...)"
-              className="w-full bg-gray-900 border-2 border-gray-700 focus:border-indigo-500 focus:ring-indigo-500 rounded-lg px-4 py-3 text-white placeholder-gray-500 transition-colors duration-300"
+              className="w-full bg-gray-900 focus:ring-2 focus:ring-indigo-500 rounded-lg px-4 py-3 text-white placeholder-gray-500 transition-colors duration-300"
               onKeyDown={(e) => e.key === 'Enter' && handleGenerate()}
             />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -64,7 +64,7 @@ const App: React.FC = () => {
                 value={symbolTheme}
                 onChange={(e) => setSymbolTheme(e.target.value)}
                 placeholder="Symbol type (e.g., stars, tech)"
-                className="w-full bg-gray-900 border-2 border-gray-700 focus:border-indigo-500 focus:ring-indigo-500 rounded-lg px-4 py-3 text-white placeholder-gray-500 transition-colors duration-300"
+                className="w-full bg-gray-900 focus:ring-2 focus:ring-indigo-500 rounded-lg px-4 py-3 text-white placeholder-gray-500 transition-colors duration-300"
                  onKeyDown={(e) => e.key === 'Enter' && handleGenerate()}
               />
                <input
@@ -74,7 +74,7 @@ const App: React.FC = () => {
                 max="5"
                 onChange={(e) => setSymbolCount(e.target.value)}
                 placeholder="Symbol count (1-5)"
-                className="w-full bg-gray-900 border-2 border-gray-700 focus:border-indigo-500 focus:ring-indigo-500 rounded-lg px-4 py-3 text-white placeholder-gray-500 transition-colors duration-300"
+                className="w-full bg-gray-900 focus:ring-2 focus:ring-indigo-500 rounded-lg px-4 py-3 text-white placeholder-gray-500 transition-colors duration-300"
                  onKeyDown={(e) => e.key === 'Enter' && handleGenerate()}
               />
             </div>
