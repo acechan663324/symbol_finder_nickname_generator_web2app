@@ -101,7 +101,12 @@ const App: React.FC = () => {
                 <UsernameCard
                   key={name}
                   username={name}
-                  onCopy={() => handleCopyToClipboard(name)}
+                  onCopy={() =>{
+                        ///调用Android端的提供的接口，先判断是否已经得到vip权限
+                        if (window.Android.isVip()) {
+                           handleCopyToClipboard(name);
+                        } 
+                    }}
                   isCopied={copiedUsername === name}
                 />
               ))}
